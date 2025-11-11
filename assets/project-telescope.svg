@@ -1,0 +1,80 @@
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="spaceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec4899;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1"/>
+    </linearGradient>
+    
+    <radialGradient id="starGlow">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:0"/>
+    </radialGradient>
+    
+    <filter id="glow-space">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="400" height="200" fill="#0a0e1a" rx="15"/>
+  <rect width="400" height="8" fill="url(#spaceGradient)" rx="15"/>
+  
+  <!-- Radio Waves -->
+  <g transform="translate(50, 90)">
+    <circle cx="0" cy="0" r="15" fill="none" stroke="#ec4899" stroke-width="2" opacity="0.8">
+      <animate attributeName="r" values="15;40;15" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0;0.8" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="15" fill="none" stroke="#8b5cf6" stroke-width="2" opacity="0.6">
+      <animate attributeName="r" values="15;40;15" dur="3s" begin="1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="3s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="15" fill="none" stroke="#ec4899" stroke-width="2" opacity="0.4">
+      <animate attributeName="r" values="15;40;15" dur="3s" begin="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0;0.4" dur="3s" begin="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <text x="0" y="10" font-size="28" text-anchor="middle" filter="url(#glow-space)">📡</text>
+  </g>
+
+  <!-- Floating Stars -->
+  <circle cx="350" cy="50" r="2" fill="url(#starGlow)">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="370" cy="70" r="1.5" fill="url(#starGlow)">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <text x="120" y="75" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="url(#spaceGradient)">
+    Radio Telescope
+  </text>
+  
+  <text x="120" y="100" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">
+    Text Me → Cosmic Secrets
+  </text>
+  
+  <text x="120" y="125" font-family="Arial, sans-serif" font-size="12" fill="#ec4899">
+    RTL-SDR • GNU Radio • Python
+  </text>
+
+  <!-- Signal Bars -->
+  <rect x="120" y="145" width="10" height="20" fill="#ec4899" opacity="0">
+    <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="140" y="140" width="10" height="25" fill="#ec4899" opacity="0">
+    <animate attributeName="opacity" values="0;1;0" dur="1s" begin="0.2s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="160" y="135" width="10" height="30" fill="#ec4899" opacity="0">
+    <animate attributeName="opacity" values="0;1;0" dur="1s" begin="0.4s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="180" y="130" width="10" height="35" fill="#ec4899" opacity="0">
+    <animate attributeName="opacity" values="0;1;0" dur="1s" begin="0.6s" repeatCount="indefinite"/>
+  </rect>
+
+  <text x="120" y="185" font-family="Arial, sans-serif" font-size="16" fill="#ec4899" filter="url(#glow-space)">
+    📡 Active
+  </text>
+</svg>
