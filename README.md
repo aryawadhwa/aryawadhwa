@@ -1,13 +1,16 @@
 <div align="center">
 
-# 🐐 **Arya Wadhwa**
+<!-- Animated Header -->
+<img src="https://raw.githubusercontent.com/aryawadhwa/aryawadhwa/main/assets/header-animation.svg" alt="Arya Wadhwa - AI/ML Engineer & Space Enthusiast"/>
 
-**2nd‑year AI/ML @ RVCE** • 19 • *Private AI + Space* 🚀
+<br/>
 
 [![GitHub followers](https://img.shields.io/github/followers/aryawadhwa?label=Followers&style=social)](https://github.com/aryawadhwa)
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/aryawadhwa)
 [![Twitter](https://img.shields.io/badge/-Twitter-1DA1F2?style=flat&logo=twitter&logoColor=white)](https://twitter.com/aryawadhwa)
 [![Email](https://img.shields.io/badge/-Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:aryawadhwa.ai@rvce.edu.in)
+
+<br/>
 
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=aryawadhwa&theme=tokyonight&hide_border=true&background=0E1117" alt="GitHub Streak"/>
 
@@ -19,58 +22,46 @@
 
 ## 🔭 **What I'm Building**
 
+<div align="center">
+
 <table>
 <tr>
 <td width="50%">
 
-### 🤖 Personal AI
-Local RAG + mom‑friendly dashboard
-
-**Tech:** PyTorch • Qdrant • FastAPI
-
-**Status:** 🏗️ In Progress
+<img src="https://raw.githubusercontent.com/aryawadhwa/aryawadhwa/main/assets/project-ai.svg" alt="Personal AI Project" width="100%"/>
 
 </td>
 <td width="50%">
 
-### 🌱 Smart Crop Advisory
-Offline disease detection + farmer tips
-
-**Tech:** OpenCV • Flask
-
-**Status:** 🌱 Growing
+<img src="https://raw.githubusercontent.com/aryawadhwa/aryawadhwa/main/assets/project-crop.svg" alt="Smart Crop Advisory Project" width="100%"/>
 
 </td>
 </tr>
 <tr>
 <td width="50%">
 
-### 👓 be.glasses
-₹2.5k CV glasses for visually impaired
-
-**Tech:** Edge‑TPU • MediaPipe
-
-**Status:** 👓 Prototyping
+<img src="https://raw.githubusercontent.com/aryawadhwa/aryawadhwa/main/assets/project-glasses.svg" alt="be.glasses Project" width="100%"/>
 
 </td>
 <td width="50%">
 
-### 📡 Radio Telescope
-Text me → cosmic secrets
-
-**Tech:** RTL‑SDR • GNU Radio
-
-**Status:** 📡 Active
+<img src="https://raw.githubusercontent.com/aryawadhwa/aryawadhwa/main/assets/project-telescope.svg" alt="Radio Telescope Project" width="100%"/>
 
 </td>
 </tr>
 </table>
+
+</div>
 
 ---
 
 ## 🛠 **Tech Stack**
 
 <div align="center">
+
+<img src="https://raw.githubusercontent.com/aryawadhwa/aryawadhwa/main/assets/tech-stack-animation.svg" alt="Tech Stack Animation" width="100%"/>
+
+<br/><br/>
 
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/-PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
