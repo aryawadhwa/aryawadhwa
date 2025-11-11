@@ -1,31 +1,97 @@
 <div align="center">
 
-# 🐐 Arya Wadhwa
+<!-- Animated Hero Banner -->
+<img src="assets/hero.svg" alt="Arya Wadhwa" width="100%"/>
 
-<img src="https://github.com/aryawadhwa.png" width="120" style="border-radius:50%;"/>
+<br/>
 
-**2nd‑year AI/ML @ RVCE** • 19 • *private AI + space* 🚀
+<!-- Avatar + Name -->
+<a href="https://github.com/aryawadhwa">
+  <img src="assets/avatar.png" width="130" style="border-radius:50%;box-shadow:0 0 20px rgba(255,107,107,.5);border:4px solid #ff6b6b;">
+</a>
+
+# 🐐 **Arya Wadhwa**
+
+**2nd‑year AI/ML @ RVCE** • 19 • *Private AI + Space* 🚀
+
+<div class="typed">
+  <span></span>
+</div>
+
+<br/>
+
+<!-- GitHub Stats -->
+<p>
+  <img src="https://img.shields.io/github/followers/aryawadhwa?label=Followers&style=social" alt="Followers">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=aryawadhwa&theme=tokyonight&hide_border=true" alt="Streak">
+</p>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=aryawadhwa&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=ff6b6b&text_color=c9d1d9" alt="Top Langs">
+
+<br/><br/>
 
 ---
 
-## 🔥 Live Stats
-![Followers](https://img.shields.io/github/followers/aryawadhwa?style=social)  
-![Streak](https://github-readme-streak-stats.herokuapp.com/?user=aryawadhwa&theme=dark)  
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=aryawadhwa&layout=compact&theme=dark)
+## 🔭 **What I’m Building**
+
+<div class="grid">
+
+| **Project** | **One‑Liner** | **Tech** | **Status** |
+|-------------|---------------|----------|------------|
+| **Personal AI** | Local RAG + mom‑friendly dashboard | PyTorch, Qdrant, FastAPI | 🏗️ |
+| **Smart Crop Advisory** | Offline disease detection + farmer tips | OpenCV, Flask | 🌱 |
+| **be.glasses** | ₹2.5k CV glasses for visually impaired | Edge‑TPU, MediaPipe | 👓 |
+| **Radio Telescope** | Text me → cosmic secrets | RTL‑SDR, GNU Radio | 📡 |
+
+</div>
 
 ---
 
-## 🔭 Building Right Now
+## 🛠 **Tech Stack** *(hover to glow)*
 
-| Project | One‑liner | Status |
-|---------|-----------|--------|
-| **Personal AI** | Local‑first RAG + dashboard | 🏗️ |
-| **Smart Crop Advisory** | Offline leaf‑disease + advice | 🌱 |
-| **be.glasses** | ₹2.5k CV glasses for visually impaired | 👓 |
-| **Radio Telescope** | DM me for cosmic secrets | 📡 |
+<div class="stack">
+  <span>🐍 Python</span>
+  <span>🔥 PyTorch</span>
+  <span>🤗 Transformers</span>
+  <span>⚡ FastAPI</span>
+  <span>🐳 Docker</span>
+  <span>⚙️ C</span>
+  <span>☕ Node.js</span>
+</div>
 
 ---
 
-## 🛠 Tech Stack
-```text
-Python • PyTorch • Transformers • FastAPI • Docker • C • Node.js
+## 🚀 **Experience**
+
+| Role | Org | Duration |
+|------|-----|----------|
+| SWE Fellow | **Headstarter AI** | Jul–Aug 2024 |
+| Builder | **buildspace** | Jun–Aug 2024 |
+| Citizen Scientist | **NASA** | 2024–2025 |
+
+---
+
+## 📬 **Reach Me** *(tap to copy)*
+
+<div class="contact">
+  <button onclick="copy('aryawadhwa.ai@rvce.edu.in')">📧 Email</button>
+  <a href="https://linkedin.com/in/aryawadhwa" target="_blank">💼 LinkedIn</a>
+  <a href="https://twitter.com/aryawadhwa" target="_blank">🐦 Twitter</a>
+</div>
+
+---
+
+## 🎯 **Roadmap (Next 12 Months)**
+
+```mermaid
+gantt
+  dateFormat YYYY-MM-DD
+  title Quest to Stanford & Space
+  section AI
+  Private AI v1      :a1, 2025-11-15, 90d
+  Smart Crop Demo    :a2, after a1, 60d
+  section Infra
+  Real DB Design     :b1, 2025-12-01, 45d
+  section Academia
+  Research SOP       :c1, 2026-02-01, 30d
+  section Space
+  Astronomy in CS    :active, 2025-11-01, 365d
