@@ -1,158 +1,69 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="420" height="220" viewBox="0 0 420 220" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Vibrant Glass Gradient -->
     <linearGradient id="glassGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.9"/>
-      <stop offset="50%" stop-color="#ec4899" stop-opacity="0.95"/>
-      <stop offset="100%" stop-color="#f43f5e" stop-opacity="0.9"/>
-      <animate attributeName="x2" values="100%;0%;100%" dur="8s" repeatCount="indefinite"/>
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1"/>
     </linearGradient>
-
-    <!-- Subtle Inner Glow -->
-    <filter id="innerGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
-      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.6 
-                                                     0 0 0 0 0.3 
-                                                     0 0 0 0 0.9 
-                                                     0 0 0 0.3 0" result="glow"/>
+    
+    <filter id="glow-glass">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
       <feMerge>
-        <feMergeNode in="glow"/>
+        <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-
-    <!-- Outer Glow for Lenses -->
-    <filter id="lensGlow">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
-      <feFlood flood-color="#ec4899" flood-opacity="0.6"/>
-      <feComposite in2="blur" operator="in"/>
-      <feMerge>
-        <feMergeNode/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <!-- Particle Animation Clip -->
-    <clipPath id="lensClipLeft">
-      <circle cx="70" cy="90" r="22"/>
-    </clipPath>
-    <clipPath id="lensClipRight">
-      <circle cx="115" cy="90" r="22"/>
-    </clipPath>
   </defs>
 
-  <!-- Background with subtle noise texture -->
-  <rect width="420" height="220" fill="#0f172a" rx="20"/>
-  <rect width="420" height="220" fill="url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"100\"><filter id=\"n\"><feTurbulence type=\"fractalNoise\" baseFrequency=\"0.9\" numOctaves=\"4\"/><feColorMatrix values=\"1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.03 0\"/></filter><rect width=\"100\" height=\"100\" filter=\"url(%23n)\" opacity=\"0.15\"/></svg>')" rx="20" opacity="0.3"/>
-
-  <!-- Top Glass Bar -->
-  <rect x="0" y="0" width="420" height="12" fill="url(#glassGradient)" rx="6" opacity="0.8"/>
-  <rect x="0" y="0" width="420" height="3" fill="#ffffff" rx="1.5" opacity="0.2"/>
-
-  <!-- Glasses Group -->
-  <g transform="translate(60, 85)">
+  <rect width="400" height="200" fill="#0a0e1a" rx="15"/>
+  <rect width="400" height="8" fill="url(#glassGradient)" rx="15"/>
+  
+  <!-- Glasses Animation -->
+  <g transform="translate(50, 80)">
     <!-- Left Lens -->
-    <circle cx="0" cy="0" r="22" fill="rgba(139, 92, 246, 0.1)" stroke="url(#glassGradient)" stroke-width="3" filter="url(#lensGlow)">
-      <animate attributeName="r" values="22;24;22" dur="3s" repeatCount="indefinite" easing="ease-in-out"/>
+    <circle cx="0" cy="0" r="20" fill="none" stroke="url(#glassGradient)" stroke-width="3">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
     </circle>
-
-    <!-- Right Lens -->
-    <circle cx="45" cy="0" r="22" fill="rgba(236, 72, 153, 0.1)" stroke="url(#glassGradient)" stroke-width="3" filter="url(#lensGlow">
-      <animate attributeName="r" values="22;24;22" dur="3s" begin="0.4s" repeatCount="indefinite" easing="ease-in-out"/>
-    </circle>
-
-    <!-- Bridge -->
-    <path d="M 20 0 Q 22.5 -8 25 0" stroke="url(#glassGradient)" stroke-width="3" fill="none"/>
     
-    <!-- Vision Rays (Dynamic AI Detection) -->
-    <g opacity="0">
-      <animate attributeName="opacity" values="0;0.9;0" dur="2s" repeatCount="indefinite"/>
-      <line x1="0" y1="0" x2="-25" y2="20" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="2 3">
-        <animate attributeName="stroke-dashoffset" values="0;5;0" dur="1s" repeatCount="indefinite"/>
-      </line>
-      <line x1="45" y1="0" x2="70" y2="20" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="2 3">
-        <animate attributeName="stroke-dashoffset" values="0;-5;0" dur="1s" begin="0.5s" repeatCount="indefinite"/>
-      </line>
-    </g>
-
-    <!-- Particle Sparks in Lenses -->
-    <g clip-path="url(#lensClipLeft)">
-      <circle cx="-5" cy="-8" r="2" fill="#a855f7" opacity="0">
-        <animate attributeName="opacity" values="0;1;0" dur="1.8s" begin="0.2s" repeatCount="indefinite"/>
-        <animate attributeName="cy" values="-8;-15" dur="1.8s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="8" cy="-10" r="1.5" fill="#ec4899" opacity="0">
-        <animate attributeName="opacity" values="0;1;0" dur="1.5s" begin="1s" repeatCount="indefinite"/>
-        <animate attributeName="cy" values="-10;-18" dur="1.5s" repeatCount="indefinite"/>
-      </circle>
-    </g>
-    <g clip-path="url(#lensClipRight)">
-      <circle cx="40" cy="-7" r="2" fill="#f43f5e" opacity="0">
-        <animate attributeName="opacity" values="0;1;0" dur="2s" begin="0.7s" repeatCount="indefinite"/>
-        <animate attributeName="cy" values="-7;-16" dur="2s" repeatCount="indefinite"/>
-      </circle>
-    </g>
-
-    <!-- Glasses Icon with subtle float -->
-    <text x="22.5" y="-35" font-size="32" text-anchor="middle" filter="url(#innerGlow)">glasses</text>
-  </g>
-
-  <!-- Text Content -->
-  <g transform="translate(140, 70)">
-    <!-- Main Title -->
-    <text x="0" y="15" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="700" fill="url(#glassGradient)" filter="url(#innerGlow)">
-      be.glasses
-    </text>
-
-    <!-- Subtitle -->
-    <text x="0" y="40" font-family="Inter, system-ui, sans-serif" font-size="15" fill="#94a3b8" letter-spacing="0.3">
-      ₹2.5k AI Glasses for the Visually Impaired
-    </text>
-
-    <!-- Tech Stack Chips -->
-    <g transform="translate(0, 58)">
-      <rect x="0" y="0" width="68" height="26" rx="13" fill="rgba(139, 92, 246, 0.15)" stroke="#a855f7" stroke-width="1.5" opacity="0">
-        <animate attributeName="opacity" values="0;1;0.8;1;0" keyTimes="0;0.2;0.4;0.8;1" dur="3s" repeatCount="indefinite"/>
-      </rect>
-      <text x="34" y="17" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#e0e7ff" text-anchor="middle" font-weight="600">Edge-TPU</text>
-    </g>
-
-    <g transform="translate(78, 58)">
-      <rect x="0" y="0" width="78" height="26" rx="13" fill="rgba(236, 72, 153, 0.15)" stroke="#ec4899" stroke-width="1.5" opacity="0">
-        <animate attributeName="opacity" values="0;1;0.8;1;0" keyTimes="0;0.3;0.5;0.8;1" dur="3s" begin="0.3s" repeatCount="indefinite"/>
-      </rect>
-      <text x="39" y="17" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#fce7f3" text-anchor="middle" font-weight="600">MediaPipe</text>
-    </g>
-
-    <g transform="translate(166, 58)">
-      <rect x="0" y="0" width="48" height="26" rx="13" fill="rgba(244, 63, 94, 0.15)" stroke="#f43f5e" stroke-width="1.5" opacity="0">
-        <animate attributeName="opacity" values="0;1;0.8;1;0" keyTimes="0;0.4;0.6;0.8;1" dur="3s" begin="0.6s" repeatCount="indefinite"/>
-      </rect>
-      <text x="24" y="17" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#fee2e2" text-anchor="middle" font-weight="600">CV</text>
-    </g>
-
-    <!-- Status Badge -->
-    <g transform="translate(0, 95)">
-      <rect x="0" y="0" width="108" height="30" rx="15" fill="rgba(139, 92, 246, 0.2)" stroke="#a855f7" stroke-width="1.5"/>
-      <text x="54" y="19" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#ddd6fe" text-anchor="middle" font-weight="600">
-        glasses Prototyping
-      </text>
-      <!-- Pulsing dot -->
-      <circle cx="18" cy="15" r="5" fill="#10b981">
-        <animate attributeName="r" values="5;7;5" dur="1.5s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="1;0.6;1" dur="1.5s" repeatCount="indefinite"/>
-      </circle>
-    </g>
-  </g>
-
-  <!-- Floating Particles Background -->
-  <g opacity="0.4">
-    <circle cx="380" cy="40" r="3" fill="#ec4899">
-      <animate attributeName="cy" values="40;30;40" dur="4s" repeatCount="indefinite"/>
+    <!-- Right Lens -->
+    <circle cx="45" cy="0" r="20" fill="none" stroke="url(#glassGradient)" stroke-width="3">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="0.3s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="40" cy="180" r="2" fill="#a855f7">
-      <animate attributeName="cy" values="180;170;180" dur="5s" begin="1s" repeatCount="indefinite"/>
-    </circle>
+    
+    <!-- Bridge -->
+    <line x1="20" y1="0" x2="25" y2="0" stroke="url(#glassGradient)" stroke-width="3"/>
+    
+    <!-- Vision Lines -->
+    <line x1="0" y1="0" x2="-15" y2="15" stroke="#ec4899" stroke-width="1" opacity="0">
+      <animate attributeName="opacity" values="0;0.8;0" dur="1.5s" repeatCount="indefinite"/>
+    </line>
+    <line x1="45" y1="0" x2="60" y2="15" stroke="#ec4899" stroke-width="1" opacity="0">
+      <animate attributeName="opacity" values="0;0.8;0" dur="1.5s" begin="0.5s" repeatCount="indefinite"/>
+    </line>
+    
+    <text x="22" y="-30" font-size="24" text-anchor="middle">👓</text>
   </g>
+
+  <text x="120" y="75" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="url(#glassGradient)">
+    be.glasses
+  </text>
+  
+  <text x="120" y="100" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">
+    ₹2.5k CV Glasses for Visually Impaired
+  </text>
+  
+  <text x="120" y="125" font-family="Arial, sans-serif" font-size="12" fill="#ec4899">
+    Edge-TPU • MediaPipe • CV
+  </text>
+
+  <!-- Detection Boxes -->
+  <rect x="120" y="135" width="40" height="25" fill="none" stroke="#8b5cf6" stroke-width="2" opacity="0">
+    <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="180" y="135" width="40" height="25" fill="none" stroke="#8b5cf6" stroke-width="2" opacity="0">
+    <animate attributeName="opacity" values="0;1;0" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+  </rect>
+
+  <text x="120" y="180" font-family="Arial, sans-serif" font-size="16" fill="#8b5cf6" filter="url(#glow-glass)">
+    👓 Prototyping
+  </text>
 </svg>
