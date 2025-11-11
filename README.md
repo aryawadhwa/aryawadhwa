@@ -4,12 +4,6 @@
 <img src="assets/hero.svg" alt="Arya Wadhwa" width="100%"/>
 
 <br/>
-
-<!-- Avatar + Name -->
-<a href="https://github.com/aryawadhwa">
-  <img src="assets/avatar.png" width="130" style="border-radius:50%;box-shadow:0 0 20px rgba(255,107,107,.5);border:4px solid #ff6b6b;">
-</a>
-
 # 🐐 **Arya Wadhwa**
 
 **2nd‑year AI/ML @ RVCE** • 19 • *Private AI + Space* 🚀
