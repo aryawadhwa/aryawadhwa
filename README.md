@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Animated Hero Banner -->
-<img src="https://github.com/aryawadhwa/aryawadhwa/blob/main/assets/hero.svg" alt="Arya Wadhwa" width="100%"/>
+<img src="https://github.com/aryawadhwa/aryawadhwa/blob/main/assets/hero.svg"/>
 
 <br/>
 # 🐐 **Arya Wadhwa**
