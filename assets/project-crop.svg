@@ -1,0 +1,60 @@
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cropGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1"/>
+    </linearGradient>
+    
+    <filter id="glow-crop">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="400" height="200" fill="#0a0e1a" rx="15"/>
+  <rect width="400" height="8" fill="url(#cropGradient)" rx="15"/>
+  
+  <!-- Plant Growing Animation -->
+  <g transform="translate(50, 120)">
+    <!-- Stem -->
+    <line x1="0" y1="0" x2="0" y2="-40" stroke="#10b981" stroke-width="3">
+      <animate attributeName="y2" values="0;-40" dur="2s" repeatCount="indefinite"/>
+    </line>
+    
+    <!-- Leaves -->
+    <ellipse cx="-15" cy="-25" rx="12" ry="8" fill="#10b981" opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+      <animate attributeName="rx" values="0;12" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="15" cy="-25" rx="12" ry="8" fill="#10b981" opacity="0">
+      <animate attributeName="opacity" values="0;1" dur="2s" begin="0.7s" repeatCount="indefinite"/>
+      <animate attributeName="rx" values="0;12" dur="2s" begin="0.7s" repeatCount="indefinite"/>
+    </ellipse>
+    
+    <text x="0" y="-45" font-size="24" text-anchor="middle">🌱</text>
+  </g>
+
+  <text x="120" y="75" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="url(#cropGradient)">
+    Smart Crop Advisory
+  </text>
+  
+  <text x="120" y="100" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">
+    Disease Detection for Farmers
+  </text>
+  
+  <text x="120" y="125" font-family="Arial, sans-serif" font-size="12" fill="#10b981">
+    OpenCV • Flask • ML
+  </text>
+
+  <!-- Scanning Effect -->
+  <rect x="120" y="135" width="250" height="2" fill="#10b981" opacity="0.5">
+    <animate attributeName="y" values="135;165;135" dur="2s" repeatCount="indefinite"/>
+  </rect>
+
+  <text x="120" y="175" font-family="Arial, sans-serif" font-size="16" fill="#10b981" filter="url(#glow-crop)">
+    🌱 Growing
+  </text>
+</svg>
