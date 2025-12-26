@@ -22,7 +22,7 @@ High reconstruction error suggests the sequence is "out-of-distribution" relativ
 """)
 
 @st.cache_resource
-def load_model(model_path="models/vae_best.pth", input_dim=8437):
+def load_model(model_path="models/vae_best.pth", input_dim=168009):
     # Determine device
     if torch.backends.mps.is_available():
         device = torch.device("mps")
@@ -49,7 +49,7 @@ def load_model(model_path="models/vae_best.pth", input_dim=8437):
         return None, None
 
 def screen_sequences(sequences, model, device):
-    processor = GenomicDataProcessor(k_mers=[3, 4])
+    processor = GenomicDataProcessor(ks=[3, 4])
     
     results = []
     errors = []
